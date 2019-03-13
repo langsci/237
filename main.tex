@@ -1,14 +1,111 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%     Language Science Press Master File       %%%
+%%%         follow the instructions below        %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Stockholm Gender}
-\author{sebastian.nordhoff }
-\date{March 2019}
+% Everything following a % is ignored
+% Some lines start with %. Remove the % to include them
 
+\documentclass[output=book
+		,modfonts
+		,nonflat
+	        ,collection
+	        ,collectionchapter
+	        ,collectiontoclongg
+ 	        ,biblatex
+ 	        ,coverus
+ 	        ,draft,draftmode
+		  ]{langsci/langscibook}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% put all additional commands you need in the
+% following files. If you do not know what this might
+% mean, you can safely ignore this section
+
+\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localhyphenation.tex}
+\input{localcommands.tex}
+\bibliography{localbibliography}
+\AtEveryBibitem{\clearlist{language}} % BO: removes the field "language" from bibliography entries
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%             Frontmatter                      %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-
 \maketitle
+%\frontmatter
+% %% uncomment if you have preface and/or acknowledgements
 
-\section{Introduction}
+\currentpdfbookmark{Contents}{name} % adds a PDF bookmark
+\tableofcontents
+%\includepaper{chapters/00-preface}
+%% \include{chapters/acknowledgments}
+
+%% Additional prefaces and/or introductions that also have authors
+\lsCollectionPaperFrontmatterMode % Enter the Frontmatter Mode.
+%\includepaper{chapters/prefaceEd}
+% \includepaper{chapters/prefaceEd2}
+\lsCollectionPaperMainmatterMode % Leave the Frontmatter Mode
+\setcounter{chapter}{0} % Reset the chapter counter so that preceeding prefaces are not counted
+%%
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%             Chapters                         %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% VOL I: General issues and areal and language-specific studies
+\part{Introduction}
+\includepaper{chapters/00-preface}	% Intro: Di Garbo & Wälchli & Olsson
+\part{General issues}
+\includepaper{chapters/02}	% Audring
+\includepaper{chapters/03}	% Dahl
+\includepaper{chapters/04}	% Nichols
+\part{Africa}
+\includepaper{chapters/05}	% Güldemann & Fiedler
+\includepaper{chapters/06}	% Killian
+\part{New Guinea}
+\includepaper{chapters/07}	% Dryer
+\includepaper{chapters/08}	% Olsson
+\includepaper{chapters/09}	% Svärd
+\part{South Asia}
+\includepaper{chapters/10}	% Liljegren
+
+%%% VOL II: Case studies in diachrony and typology
+ \part{Diachrony and typology}
+ \includepaper{chapters/11}	% Di Garbo & Miestamo
+ \includepaper{chapters/12} 	% Wälchli
+ \includepaper{chapters/13} 	% Sinnemäki
+ \includepaper{chapters/14}	% Wälchli & Di Garbo: Synopsis
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%             Backmatter                       %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% There is normally no need to change the backmatter section
+\input{backmatter.tex}
 
 \end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%                  END                         %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% you can create your book by running
+% xelatex main.tex
+%
+% you can also try a simple
+% make
+% on the commandline
