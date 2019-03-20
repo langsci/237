@@ -306,19 +306,37 @@ but	they-\textsc{erg}	this	child	\textbf{\textsc{n.uni-acc}}	\textsc{3sg}	Jesus	
 \z
 }%
 
-\begin{figure}
-\begin{tabular}{lllllll}
-Ø &	\multicolumn{2}{c}{<---SINGULAR----------- \textit{bi-}} &	\multicolumn{4}{c}{\textit{a-} ---------------------------------------------------------->}\\
-Ø	& \multicolumn{6}{c}{<---PLURAL--------a------------------------------------------------------------------------->}\\
-personal 	& person  &	kinship terms  &	kinship terms  &	humans &	animates &	things \\
-pronouns & names & older than ego & younger than ego & & & \\
- &	\multicolumn{2}{l}{prominent animates} \\
- &  \multicolumn{2}{l}{\textit{masculine nominalizations}} \\
- &  \multicolumn{2}{l}{\textit{masculine demonstrative}} \\
-\end{tabular}
+\begin{figure}%
+\resizebox{\textwidth}{!}{\begin{tikzpicture}[baseline,nodes={text height=.7em, text depth=.2em}]%
+% Ø &	\multicolumn{2}{c}{<---SINGULAR----------- \textit{bi-}} &	\multicolumn{4}{c}{\textit{a-} ---------------------------------------------------------->}\\
+% Ø	& \multicolumn{6}{c}{<---PLURAL--------a------------------------------------------------------------------------->}\\
+\node at (0,0) [align=center,anchor=base west] (persp) {\strut personal\\pronouns}; 
+    \node[right=1em of persp.base east,anchor=base west,align=center] (persn) {\strut person\\names}; 
+        \node[align=center,right=1em of persn.base east,anchor=base west] (kinolder) {\strut kinship terms\\older than ego}; 
+            \node[align=center,right=1em of kinolder.base east,anchor=base west] (kinyounger) {\strut kinship terms\\younger than ego}; 
+                \node[right=1em of kinyounger.base east,anchor=base west] (humans) {\strut humans}; 
+                    \node[right=1em of humans.base east,anchor=base west] (animates) {\strut animates}; 
+                        \node[right=1em of animates.base east,anchor=base west] (things) {\strut things};
+\draw [decoration=brace,decorate] (kinolder.south east) -- (persn.south west) node[midway,below=2.5\baselineskip,align=center] {prominent animates\\\itshape masculine nominalizations\\\itshape masculine demonstrative};
+\node[above=\baselineskip  of persp.north,align=center,anchor=base] (emptyset1) {∅};
+\node[above=2\baselineskip of persp.north,align=center,anchor=base] (emptyset2) {∅};
+\node[above right=2\baselineskip and .25em of kinyounger.north west,anchor=base] (a) {\itshape a-};
+\node[above left=2\baselineskip and .25em of kinolder.north east,anchor=base] (bi) {\itshape bi-};
+    \node [above=2\baselineskip of things.north east,anchor=base] (UpperEast) {};
+    \node [above=\baselineskip of things.north east,anchor=base] (LowerEast) {};
+    \node[above=2\baselineskip of persn.north west,anchor=base] (UpperWest) {};
+    \node[above=\baselineskip of  persn.north west,anchor=base] (LowerWest) {};
+\node[right=3em of UpperWest.base east,anchor=base] (singular) {\scshape singular};
+\node[right=3em of LowerWest.base east,anchor=base] (plural) {\scshape plural};
+\draw [->] (a) -- (UpperEast);
+\draw [->] (bi) -- (singular) -- (UpperWest);
+\path (plural) edge [->] (LowerWest)
+               edge [->] node[pos=.1,fill=white] {\itshape a} (LowerEast);
+\end{tikzpicture}}%
 \caption{Una \textit{bi-} unique and \textit{a-} non-unique and the animacy hierarchy}
 \label{fig:WDG:2}
 \end{figure}
+
 
 The Una gender system can thus largely be characterized by the animacy hierarchy in \figref{fig:WDG:2}. There are two anomalies (in italics in \figref{fig:WDG:2}). There is a masculine singular nominalizing suffix \textit{-nyi}, often used in indigenous names, and nominalizations suffixed by \textit{-nyi} are always unique \textit{bi-}.%
 \footnote{%
