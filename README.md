@@ -1,4 +1,4 @@
-# Grammatical gender and linguistic complexity
+# Grammatical gender and linguistic complexity II: Case-studies in diachrony and typology 
 
 ## Publication Info
 
@@ -8,7 +8,7 @@
 - Volume: 
 
 ## Requirements
-This book requires [Doulos SIL](https://software.sil.org/doulos/) to be installed as a user or system font on the compiling machine.
+This book requires [Doulos SIL](https://software.sil.org/doulos/) and [Sarabun Light](https://fonts.google.com/specimen/Sarabun) to be installed as a user or system font on the compiling machine.
 
 ## Description
 not yet available
