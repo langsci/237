@@ -21,7 +21,8 @@ not yet available
 Copyright: (c) 2019, the authors.
 
 The following files are re-distributed under the Open Font License (OFL):
-```langsci/fonts/AnnapurnaSIL-R.ttf
+```
+langsci/fonts/AnnapurnaSIL-R.ttf
 langsci/fonts/HindMadurai-Regular.otf
 langsci/fonts/Sarabun-Light.ttf
 ```
