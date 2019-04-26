@@ -26,10 +26,17 @@
 \AdditionalFontImprint{SIL Doulos}
 
 %% For Wälchli's Chapter 12
-\newfontfamily\khmerfont{Sarabun Light}[Scale=MatchLowercase]
+\newfontfamily\khmerfont{Sarabun-Light.ttf}[Scale=MatchLowercase,Path=\fontpath]
 \DeclareTextFontCommand{\textkhmer}{\khmerfont}
 \AdditionalFontImprint{Sarabun Light}
 
+\newfontfamily\devanagarifont{AnnapurnaSIL-R.ttf}[Scale=MatchLowercase,Path=\fontpath]
+\DeclareTextFontCommand{\textdevanagari}{\devanagarifont}
+\AdditionalFontImprint{SIL Annapurna}
+
+\newfontfamily\tamilfont{HindMadurai-Regular.otf}[Scale=MatchLowercase,Path=\fontpath]
+\DeclareTextFontCommand{\texttamil}{\tamilfont}
+\AdditionalFontImprint{ITF Hind Madurai}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                                              %%%
