@@ -7,9 +7,6 @@
 - Series: Studies in Diversity Linguistics  
 - Volume: 
 
-## Requirements
-This book requires [Doulos SIL](https://software.sil.org/doulos/) and [Sarabun Light](https://fonts.google.com/specimen/Sarabun) to be installed as a user or system font on the compiling machine.
-
 ## Description
 not yet available
 
@@ -23,6 +20,12 @@ not yet available
 
 Copyright: (c) 2019, the authors.
 
-All data, code and documentation in this repository is published under the
+The following files are re-distributed under the Open Font License (OFL):
+```langsci/fonts/AnnapurnaSIL-R.ttf
+langsci/fonts/HindMadurai-Regular.otf
+langsci/fonts/Sarabun-Light.ttf
+```
+
+All other data, code and documentation in this repository is published under the
 [Creative Commons Attribution 4.0 Licence](http://creativecommons.org/licenses/by/4.0/)
 (CC BY 4.0).
