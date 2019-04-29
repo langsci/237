@@ -158,12 +158,12 @@ However, when assembling a set of passages expressing feminine anaphoric in a pa
 
 All languages have some anaphoric expressions in the feminine anaphoric domain, but not all expressions are grammatical expressions and not all grammatical expressions are feminine. The anaphoric expressions in the feminine anaphoric domain can be nouns, such as ‘woman’ or ‘girl’, or they can be pronouns not distinguishing gender. This is both illustrated in (10) from Turkish with the noun \textit{kadın} ‘woman’ and the general third person pronoun \textit{o} ‘he/she’.
 
-\ea\label{ex:BW:10}
+\eas\label{ex:BW:10}
 Turkish (Matth. 15:24–27)\\
 \gll \textbf{İsa}, «\ldots»	diy-e	cevap	ver-di.	Kadın	ise	yaklaş-ıp, «\ldots»	diyerek [\ldots]. İsa	o-na, «\ldots»	de-di.	Kadın, «\ldots»	de-di. «\ldots»\\
 Jesus	{} say-\textsc{cvb}	answer	give-\textsc{pst3}	woman	however	approach-\textsc{cvb} {} say-\textsc{cvb} {} Jesus	\textsc{3sg-dat} {}	say-\textsc{pst3}	woman {}	say-\textsc{pst3} {}\\
 \glt ‘But \textbf{he} [=Jesus] answered and said, “\ldots” But \textbf{she} [=the woman] came [\ldots] saying, “\ldots”. And \textbf{he} [=Jesus] answered (to \textbf{her}) and said, “\ldots”. So \textbf{she} [=the woman] said, “\ldots” ’
-\z
+\zs
 
 It is thus not all expressions in the functional domain of picking up reference to female humans that instantiate feminine gender. If we extract the forms which are associated with the feminine anaphoric domain, which can easily be done by means of collocation measures (see \sectref{sec:BW:3}), the recall will be too large. Put differently, many nouns, such as Turkish \textit{kadın} ‘(a/the) woman’, and general anaphoric pronouns, such as Turkish \textit{o} ‘he/she’, will be extracted as well. One way to account for this is to define the search domain very narrowly by excluding such contexts where many languages use nouns instead of pronouns. But cross-linguistic and stylistic differences in the use of nouns, pronouns and zero anaphors are so large that a restrictive search domain is not sufficient.
 
@@ -243,12 +243,7 @@ The easiest way to design a search domain is to take one or several \spterm{seed
   Indonesian	&	\textbf{perempuan}, >\textbf{nya\#}<	&	‘woman’, \textsc{poss.3sg}	\\
 \lspbottomrule
 \end{tabular}
-\small{
-\begin{flushleft}
-Here and elsewhere the notation >x< will be used for morphs and \# is used for word boundaries.
-\end{flushleft}
-}%
-\caption{Word forms and morphs best collocating with English \textit{she+her}}
+\caption{Word forms and morphs best collocating with English \textit{she+her}. Here and elsewhere the notation >x< will be used for morphs and \# is used for word boundaries.}
 \label{tab:BW:1}
 \end{table}
 
@@ -286,12 +281,12 @@ two of which have been illustrated in (\ref{ex:BW:12}). Choosing the verse (or s
 
 Furthermore, it needs to be pointed out that the N.T.\ is a text where feminine anaphoric gender is strongly underrepresented. Together with the considerable number of verses that have been excluded, this results in a quite small search domain, less than 1\% of the text. However, there are enough examples in the text for a mostly correct automatic extraction of frequent feminine gender grams, even if this sometimes means that only some, not all, markers of a feminine anaphoric gender gram are extracted. Extraction works quite well, despite the fact that the algorithm used here is crude. This testifies to the high cue validity of feminine gender markers. Put differently, in most languages identifying feminine gender grams is not particularly complex and does not presuppose any knowledge about gender systems.
 
-The algorithm goes through all candidates and checks which of them matches best with the trigger domain according to a collocation measure (here T-score as defined by \citealt{Fung1994} is used) above a certain threshold. The threshold is determined empirically so that no or few incorrect forms appear. In order to demonstrate that this can be done in slightly different ways, two different thresholds have been applied: t=3.4 and t=3.19. The higher threshold prevents the first entirely wrong form to be extracted (Buglere \textit{chku} [arrive:\textsc{pfv}] ‘arrived’). However, with the higher threshold we also lose three languages with a feminine gender gram: Kabyle, Angami Naga and Owa (Owa is actually a borderline case, see 5.4), but there are also a large number of arguable errors among the 44 forms that are not extracted with the higher threshold. Since many errors are very interesting from a methodological point of view, I have chosen not to use only the higher threshold, which would probably have been the most reasonable thing to do for an optimal extraction. Forms only extracted with the lower threshold are given in curly braces in \tabref{tab:BW:2} and in Appendix A.
+The algorithm goes through all candidates and checks which of them matches best with the trigger domain according to a collocation measure (here T-score as defined by \citealt{Fung1994} is used) above a certain threshold. The threshold is determined empirically so that no or few incorrect forms appear. In order to demonstrate that this can be done in slightly different ways, two different thresholds have been applied: $\text{t}=3.4$ and $\text{t}=3.19$. The higher threshold prevents the first entirely wrong form to be extracted (Buglere \textit{chku} [arrive:\textsc{pfv}] ‘arrived’). However, with the higher threshold we also lose three languages with a feminine gender gram: Kabyle, Angami Naga and Owa (Owa is actually a borderline case, see 5.4), but there are also a large number of arguable errors among the 44 forms that are not extracted with the higher threshold. Since many errors are very interesting from a methodological point of view, I have chosen not to use only the higher threshold, which would probably have been the most reasonable thing to do for an optimal extraction. Forms only extracted with the lower threshold are given in curly braces in \tabref{tab:BW:2} and in Appendix A.
 
 \begin{table}
-\begin{tabularx}{\textwidth}{lll}
+\begin{tabularx}{\textwidth}{lQS[table-format=1.3]}
 \lsptoprule
-Language	&	Extraction	&	T-value of first form	\\
+Language	&	Extraction	&	{T-value of first form}\\
 \midrule
 Akateko (knj)	&	[ix]1	&	7.682	\\
 Ama (amm)	&	[isoki]1	&	4.113	\\
@@ -387,7 +382,7 @@ Finally, four occasional forms for ‘woman’, third person singular personal p
 
 \begin{enumerate}[label=(\alph*)]
 \item
-\emph{Anaphoric (demonstrative or definite) forms of a word for ‘woman’}: In South Tairora the form \textit{nraakyeva} [\textit{nraakye-va} ‘woman-DEM’] is extracted, because the naive algorithm cannot recognize that it contains \textit{nraakye} ‘woman’ and should therefore be removed by the ‘woman’ filter. In South Tairora demonstrative NPs are formed by a free demonstrative, \textit{mwi}, \textit{mwa}, or \textit{mwatai} in the N.T.\ text, followed by a noun with an obligatory \textit{-va} suffix (\citealt[584]{Vincent2010}). The form \textit{nraakyeva} has the correct distribution since it only occurs in the feminine anaphoric domain; it is not a general form for ‘woman’ and passes therefore the ‘woman’ filter. This error thus derives from the fact that the algorithm applied here does not have the capacity to segment word forms into morphemes. Extracted forms with the same kind of error include Sabaot \textit{(:)cheebyoosyaanaa} ‘this woman’, Endo \textit{cheepyoosoonoonēē}, Ayautla Mazatec \textit{chjunbiu}, Safeyoka (Wojokeso) \textit{a'musi}, Umbu-Ungu \textit{ambomo}, and Rawa \textit{barega}
+\emph{Anaphoric (demonstrative or definite) forms of a word for ‘woman’}: In South Tairora the form \textit{nraakyeva} [\textit{nraakye-va} ‘woman-\textsc{dem}’] is extracted,\linebreak because the naive algorithm cannot recognize that it contains \textit{nraakye} ‘woman’ and should therefore be removed by the ‘woman’ filter. In South Tairora demonstrative NPs are formed by a free demonstrative, \textit{mwi}, \textit{mwa}, or \textit{mwatai} in the N.T.\ text, followed by a noun with an obligatory \textit{-va} suffix (\citealt[584]{Vincent2010}). The form \textit{nraakyeva} has the correct distribution since it only occurs in the feminine anaphoric domain; it is not a general form for ‘woman’ and passes therefore the ‘woman’ filter. This error thus derives from the fact that the algorithm applied here does not have the capacity to segment word forms into morphemes. Extracted forms with the same kind of error include Sabaot \textit{(:)cheebyoosyaanaa} ‘this woman’, Endo \textit{cheepyoosoonoonēē}, Ayautla Mazatec \textit{chjunbiu}, Safeyoka (Wojokeso) \textit{a'musi}, Umbu-Ungu \textit{ambomo}, and Rawa \textit{barega}
 (see Appendix A IV). Several similar forms are slightly below the lower threshold for extraction, such as Low Tarahumara (\textit{muki-ka} ‘woman-\textsc{emph}') and Auhelawa (\textit{waihiuna-ne} woman-\textsc{dem/def}’). Also Ama \textit{nukonu} [woman.\textsc{spec}] (see (\ref{ex:BW:3})) sorts here, with an irregular form of the specifier (suffix \textit{-ta} in other nouns; \citealt[92]{Arsjoe1999}); however, this form is not extracted.
 
 Generally, a demonstrative or definite form of ‘woman’ tends to be extracted whenever the demonstrative or definite marker is synthetic. This kind of error is particularly instructive because it shows us how anaphoric gender markers may emerge. Expressions for ‘that woman’ may qualify as anaphoric gender markers to the extent that the noun and demonstrative have become opaque. This is exactly what has happened in languages with non-compositional complex NPs such as Japanese (see  \sectref{sec:BW:5.2}). The errors made by the computer derive from the fact that more forms are opaque for the computer than for humans.
@@ -689,12 +684,12 @@ The literature on noun classifiers has in common with the literature on gender t
 \subsection{Non-compositional complex NPs}
 \label{sec:BW:5.2}
 
-Non-compositional complex NPs have similar uses as expressions for ‘that woman/man’, and sometimes they are entirely opaque, as the example from Kiribati illustrated in \sectref{sec:BW:1}. However, non-compositional complex NPs are not usually condensed forms of ‘that woman/man’; rather they contain other nouns that have been generalized to general meanings of feminine or masculine, such as ‘mother’ or ‘elder sister’ or ‘body’ or they contain obsolete or irregular forms of demonstrative pronouns.
+Non-compositional complex NPs have similar uses as expressions for ‘that woman\slash man’, and sometimes they are entirely opaque, as the example from Kiribati illustrated in \sectref{sec:BW:1}. However, non-compositional complex NPs are not usually condensed forms of ‘that woman/man’; rather they contain other nouns that have been generalized to general meanings of feminine or masculine, such as ‘mother’ or ‘elder sister’ or ‘body’ or they contain obsolete or irregular forms of demonstrative pronouns.
 
 English has no anaphoric non-compositional NPs, but a related phenomenon is indefinite pronouns originating from NPs, such as \textit{somebody}. \textit{Somebody} contains the noun \textit{body}, but does not have the meaning that the noun \textit{body} has. For a typology of indefinite pronouns, see \citet{Haspelmath1997}. In the languages of the sample, non-compositional complex NPs are attested in Kiribati (Austronesian), Japanese (isolate), Kannada (Dravidian), Zome (Sino-Tibetan), Golin and Chuave (Chimbu, Trans-New Guinea phylum). Anaphoric gender markers in some South American languages with noun classifiers, notably Nambikuara and in Guahiban and Witotoan languages, are highly reminiscent of non-compositional complex NPs and can perhaps be interpreted as more advanced stages of grammaticalization. \tabref{tab:BW:8} summarizes the forms of the languages discussed in this section.
 
 \begin{table}
-\begin{tabularx}{\textwidth}{Q>{\itshape}X>{\itshape}X>{\itshape}X>{\itshape}X}
+\begin{tabularx}{\textwidth}{Q>{\itshape}Q>{\itshape}Q>{\itshape}Q>{\itshape}Q}
 \lsptoprule
 & \normalfont	Index (3sg general)	&	\normalfont Grammatical anaphor	&	\normalfont NP ‘that woman’	&	\normalfont ‘woman’	\\
 \midrule
@@ -770,7 +765,7 @@ Non-compositional complex NPs tend not to be genealogically pervasive. They pop 
 While the non-compositional complex NPs discussed in \sectref{sec:BW:5.2} are found in a wide range of language families, the reduced nominal anaphors in the sample all come from Mesoamerica and almost exclusively from one family, Otomanguean. \tabref{tab:BW:9} lists examples from six Otomanguean examples, where reduced nominal anaphors occur in subject and reflexive possessor roles.
 
 \begin{table}
-\begin{tabular}{l>{\setlength{\tabcolsep}{2pt}}l}
+\resizebox{\textwidth}{!}{\begin{tabular}{l>{\setlength{\tabcolsep}{2pt}}l}
 \lsptoprule
 Tlalcoyalco Popoloca	& \multirow{2}{*}{
                         \begin{tabular}{*{8}{l}}
@@ -796,21 +791,21 @@ Tepeuxila Cuicatec	 &	\multirow{2}{*}{
                         }\\
 \\
 \padding
-San Martín Itunyoso Triqui	&	\multirow{2}{*}{
+San Martín Itunyoso 	&	\multirow{2}{*}{
                               \begin{tabular}{*{6}{l}}
                               \itshape ni̱ &\itshape naga'ui' &\itshape \textbf{ún'} &\itshape ra'a &\itshape nni &\itshape \textbf{ún'}	\\
                               and &gave &\textbf{\textsc{f}} &to &mother &\textbf{\textsc{f}}	\\
                               \end{tabular}
                               }\\
-\\
+Triqui\\
 \padding
-Chiquihuitlan Mazatec	&	\multirow{2}{*}{
+Chiquihuitlan 	&	\multirow{2}{*}{
                         \begin{tabular}{*{5}{l}}
                         \itshape ca-sua &\itshape \textbf{na} &\itshape naa &\itshape rë &\itshape \textbf{na}	\\
                         \textsc{compl}-give &\textbf{\textsc{f}} &mother &\textsc{poss} &\textbf{\textsc{f}}	\\
                         \end{tabular}
                         }\\
-\\
+Mazatec\\
 \padding
 Amatlan Zapotec	&	      \multirow{2}{*}{
                         \begin{tabular}{*{7}{l}}
@@ -820,7 +815,7 @@ Amatlan Zapotec	&	      \multirow{2}{*}{
                         }\\
 \\
 \lspbottomrule
-\end{tabular}
+\end{tabular}}
 \caption{V-subject and N-reflexive possessor in ‘and she (=the girl) brought it to her mother’ (Matth.~14:11) in selected Otomanguean languages with anaphoric gender}
 \label{tab:BW:9}
 \end{table}
@@ -891,12 +886,12 @@ Jacaltec (Matth.~14:8)\\
 
 However, it is not the entire top activation domain that is covered by the general nouns. Reflexive possessors lack general nouns. \citet[159]{Craig1977}, who describes the phenomenon in detail, calls this “noun classifier deletion under identity of reference”. Diachronically classifiers are not deleted from reflexive possessor function; rather they have never been expanded to that domain. Note that reflexive possessor even includes co-reference with object as shown in (\ref{ex:BW:23}) (“no constraint on the controller NP”, \citealt[152]{Craig1977}).
 
-\ea\label{ex:BW:23}
+\eas\label{ex:BW:23}
 Jacaltec (Lk.~7:15)\\
 \gll y-a-ni-co	Comam	naj	t-et	is-mi'.\\
 \textsc{erg}.3-give-\textsc{detrans-dir}	\textsc{cl}.male.deity	\textsc{cl}.man/\textsc{m}	3-to	\textsc{poss}.3-mother\\
 \glt ‘and he gave him\textsubscript{j} to his\textsubscript{j} mother’\\
-\z
+\zs
 
 The wider extension of possessive prefixes even to obligatory use with prepositions (\textit{t-et} \textsc{3sg}-to) testifies to their higher degree of maturity. Not all noun classifiers in Jacaltec (\citealt[125]{Day1973}) are general or reduced nouns.
 
@@ -917,7 +912,7 @@ The three subtypes of grammatical anaphors discussed above reflect different par
 
 
 \begin{table}
-\begin{tabular}{llllll}
+\resizebox{\textwidth}{!}{\begin{tabular}{l *{5}{c}}
 \lsptoprule
 Subtype	&	Complex	&	Opaque	&	Reduced	&	Frequent	&	General	\\
 \midrule
@@ -925,7 +920,7 @@ Non-compositional complex NP	&	$+$*	&	$+$	&	$-$/$+$	&	$-$	&	$+$	\\
 Reduced nominal anaphor	&	$-$	&	$+$	&	$+$*	&	$+$	&	$-$	\\
 General noun	&	$-$	&	$-$	&	$-$	&	$+$/$-$	&	$+$*	\\
 \lspbottomrule
-\end{tabular}
+\end{tabular}}
 \caption{Different properties of the subtypes of grammatical anaphors}
 \label{tab:BW:10}
 \end{table}
@@ -971,8 +966,7 @@ Finally, this paper has shown that parallel texts are highly useful for the stud
 I would like to thank Francesca Di Garbo, Östen Dahl, Andrej Kibrik, Robert Östling, Martin Haspelmath, Bruno Olsson and Annemarie Verkerk for many useful suggestions. While writing this paper I was partly funded by the Swedish Research Council (\textit{Vetenskapsrådet}, 421--2011--1444).
 
 \section*{Abbreviations in glosses}
-
-\begin{tabularx}{\textwidth}{lXlX}
+\begin{tabularx}{\textwidth}{@{}lXlQ@{}}
   1	&	first person	&	\textsc{neg}	&	negation	\\
   2	&	second person	&	\textsc{nom}	&	nominative	\\
   3	&	third person	&	\textsc{o}/O	&	(direct) object	\\
@@ -1011,8 +1005,7 @@ I would like to thank Francesca Di Garbo, Östen Dahl, Andrej Kibrik, Robert Ös
   \textsc{n}	&	noun	&	\textsc{young}	&	gender for children or young people	\\
 \end{tabularx}
 
-
-\printbibliography[heading=subbibliography,notkeyword=this]
+{\sloppy\printbibliography[heading=subbibliography,notkeyword=this]}
 
 \newpage
 \input{chapters/12-appendix1.tex}

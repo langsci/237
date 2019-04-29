@@ -5,7 +5,7 @@
 \usepackage{amsmath}
 \usepackage{multicol}
 \usepackage{longtable}
-\usepackage{pdflscape}
+\usepackage{lscape}
 \usepackage{rotating}
 \usepackage{lipsum}
 \usepackage{multirow}
@@ -18,6 +18,12 @@
 \usepackage{amsthm} % for theorems in Don's chapter
 \usepackage{tabulary} % for tables in Don's chapter
 \usepackage{enumitem}
+
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={.},detect-weight=true, detect-family=true, detect-all, input-symbols={\%}, free-standing-units, input-open-uncertainty=\{, input-close-uncertainty=\},table-align-text-pre=false,uncertainty-separator={\,},group-digits=false,detect-inline-weight=math}
+\DeclareSIUnit[number-unit-product={}]{\percent}{\%}
+\makeatletter \def\new@fontshape{} \makeatother
+\robustify\bfseries % For detect weight to work
 
 %% The following is for Don's tone marks (06.tex)
 \usepackage{fontspec}

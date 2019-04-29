@@ -276,12 +276,12 @@ The equation showing the structure of mixed logistic regression is presented in 
 
 \ea
 \label{ex:Sinne:10}
-$P(y_{i}=1)={\mathit{logit}}^{-1}({\alpha} _{j,k[i]}+{\beta} _{j,k[i]}{x}_{i})$
+$P(y_{i}=1)={\text{logit}}^{-1}({\alpha} _{j,k[i]}+{\beta} _{j,k[i]}{x}_{i})$
 \z
 
 The term $\alpha$ is the intercept for each $i$\textsuperscript{th} datapoint (= language) and the $\beta$ is the regression coefficient (the slope) for the predictor ($x$). In (mixed) logistic regression the intercept is the logarithm of the odds for the dependent variable given the default level of the predictor(s), which in R are chosen alphabetically \citep[128]{Arppe2008}. In my models gender is the dependent variable with two values ``absence'' and ``presence'' and its default level is ``absence''. The predictor in my model is numeral classifiers which has two values ``absence'' and ``presence'' and with a default value ``absence''. The intercept in my model, therefore, is the log odds of gender for languages that have no numeral classifiers. In (mixed) logistic regression the slope for a binary variable is the difference in the log odds of the dependent variable between the different levels of the predictor variable. Here this means that the slope is the difference in log odds for having gender in a language that has numeral classifiers compared to a language that has no numeral classifiers.
 
-In (mixed) logistic regression the dependent variable is categorical and its expected response, the odds $1/(1-p)$, is transformed via natural logarithm to yield logarithm of the odds. In my model design this means $log(1/(1-p))$ for observing gender vs.\ not observing gender. Alternatively, to obtain predicted \textit{probabilities} for observing gender vs.\ observing no gender in a language the predictor is transformed via inverse logit function, as in (\ref{ex:Sinne:10}). In this equation, $P(y\textsubscript{i} = 1)$ is the predicted probability that we observe gender (presence of gender = 1) for each item $i$ and the subindices $j$ and $k$ represent the adjustments of the intercept and slope for each grouping factor (here area and family, see below).
+In (mixed) logistic regression the dependent variable is categorical and its expected response, the odds $1/(1-p)$, is transformed via natural logarithm to yield logarithm of the odds. In my model design this means $\log(1/(1-p))$ for observing gender vs.\ not observing gender. Alternatively, to obtain predicted \textit{probabilities} for observing gender vs.\ observing no gender in a language the predictor is transformed via inverse logit function, as in (\ref{ex:Sinne:10}). In this equation, $P(y\textsubscript{i} = 1)$ is the predicted probability that we observe gender (presence of gender = 1) for each item $i$ and the subindices $j$ and $k$ represent the adjustments of the intercept and slope for each grouping factor (here area and family, see below).
 
 This possibility to adjust the intercept and the slope through each grouping factor is probably the most powerful property of mixed effects modeling. I use geographical area and language family as grouping factors and I let both the intercept and the slope vary between the levels of these grouping factors. A random intercept for family means that each family is allowed to have different intercepts to account for the family-related variability in the distribution of gender. A random slope for the family, on the other hand, means that numeral classifiers are allowed to have a different effect on gender in each family to account for the family-related variability in how numeral classifiers affect gender. The random effects for area work analogously. In addition, the models include a correlation term between the intercepts and slopes of a particular random effect. This correlation term accounts for the variation that may arise from families (or areas) with large adjustment for the intercept (= gender) having also a large coefficient for the slope (= numeral classifiers).
 
@@ -394,15 +394,14 @@ The hypothesis that an inverse relationship exists between gender and numeral cl
 According to the mixed logistic regression, languages with numeral classifiers were significantly less likely to have gender than those with no numeral classifiers (logit estimates: $-2.1 \pm 1.1$ (standard errors); $\chi^2$ (1) = 7.7; p = 0.0056). The negative coefficient and the highly significant p-value suggest that the hypothesis is confirmed. A closer inspection of the random effects in \tabref{tab:Sinne:3} confirms that the random structure is feasible: the correlation terms between the random intercept and the random slopes for both family and continent are not too large ($0.41$ and $-0.09$, respectively).
 
 \begin{table}[htb]
-\begin{tabularx}{\textwidth}{XXXXX}
+\begin{tabularx}{\textwidth}{XX *{3}{S[table-format=+1.2]}}
 \lsptoprule
-\multicolumn{2}{l}{Random effects:} &  & \\
- Groups &  Name &  Variance &  Std.Dev. &  Corr\\
+ Groups &  Name &  {Variance} &  {Std. Dev.} &  {Corr}\\
 \midrule
-family & (Intercept) & 2.35 & 1.53\\
-& clfyes & 1.48 & 1.22 & 0.41\\
+family    & (Intercept) & 2.35 & 1.53\\
+          & clfyes      & 1.48 & 1.22 & 0.41\\
 continent & (Intercept) & 0.63 & 0.80\\
-& clfyes & 0.53 & 0.73 & $-0.09$\\
+          & clfyes      & 0.53 & 0.73 & -0.09\\
 \lspbottomrule
 \end{tabularx}
 \caption{Random effects for the maximal model}
@@ -509,10 +508,9 @@ I would like to thank the audiences of the workshops \textit{Grammatical gender 
 
 \section*{Abbreviations}
 
-The following is the list of abbreviations used in the interlinear glosses in this paper:
-\medskip
-
-\begin{tabular}{llllll}
+% % The following is the list of abbreviations used in the interlinear glosses in this paper:
+% \medskip
+\begin{tabular}{@{}llllll@{}}
 \textsc{3}	&	third person	&	\textsc{hum}	&	human	&	\textsc{pl}	&	plural	\\
 \textsc{a}	&	active	&	\textsc{icmp}	&	incompletive	&	\textsc{poss}	&	possessor marking	\\
 \textsc{anim}	&	animate	&	\textsc{indf}	&	indefinite	&	\textsc{prep}	&	preposition	\\
@@ -523,7 +521,6 @@ The following is the list of abbreviations used in the interlinear glosses in th
 \textsc{f}	&	feminine	&	\textsc{num}	&	numeral	&	\textsc{sbj}	&	subject	\\
 \textsc{fin}	&	finite	&	\textsc{nvis}	&	non-visible	&	\textsc{sg}	&	singular	\\
 \textsc{gen}	&	genitive	&	\textsc{obj}	&	object	&	\textsc{wk}	&	week	\\
-
 \end{tabular}
 
 
@@ -556,23 +553,17 @@ In the mixed effects modeling I let the intercepts and the slopes vary between t
 
 \begin{table}[htb]
 \footnotesize
-\begin{tabularx}{\textwidth}{lXXXrr}
+\begin{tabularx}{\textwidth}{lQXQrr}
 \lsptoprule
-\bfseries Model & {\bfseries Areal}
-
-\bfseries configuration & {\bfseries Genealogical}
-
-\bfseries classification & {\bfseries logit \linebreak estimates}
-
-\bfseries + std error & \bfseries $\chi^2$ (1) & \bfseries p-value\\
+ Model & Areal\linebreak configuration  & Genealogical\linebreak classification & logit estimates\linebreak + std. error &  $\chi^2(1)$ &  p-value\\
 \midrule
 W24 & 24 areas & \textit{WALS}{}-families & $-2.1 \pm 1.1$ & 9.3 & 0.002\\
 W6 & 6 macroareas & \textit{WALS}{}-families & $-1.9 \pm 0.9$ & 4.1 & 0.042\\
-W2 & Circum-Pacific / Old World & \textit{WALS}{}-families & $-2.0 \pm 0.8$ & 6.3 & 0.012\\
+W2 & Circum-Pacific\slash Old World & \textit{WALS}{}-families & $-2.0 \pm 0.8$ & 6.3 & 0.012\\
 A10 & 10 continents & \textit{Autotyp}{}-stocks & $-3.4 \pm 2.4$ & 8.3 & 0.004\\
 A24 & 24 areas & \textit{Autotyp}{}-stocks & $-3.1 \pm 2.3$ & 9.2 & 0.002\\
 A6 & 6 macroareas & \textit{Autotyp}{}-stocks & $-3.1 \pm 1.9$ & 4.7 & 0.030\\
-A2 & Circum-Pacific / Old World & \textit{Autotyp}{}-stocks & $-5.1 \pm 2.8$ & 8.0 & 0.005\\
+A2 & Circum-Pacific\slash Old World & \textit{Autotyp}{}-stocks & $-5.1 \pm 2.8$ & 8.0 & 0.005\\
 \lspbottomrule
 \end{tabularx}
 \caption{Seven additional models, the design of their random effect structure, and the results of the mixed effects modeling}
@@ -583,8 +574,7 @@ The results of these additional models are summarized in \tabref{tab:Sinne:4}. A
 
 \input{chapters/13-appendix.tex}
 
-
-\printbibliography[heading=subbibliography,notkeyword=this]
+{\sloppy\printbibliography[heading=subbibliography,notkeyword=this]}
 
 \label{lastpage:Sinne}
 \end{document}
