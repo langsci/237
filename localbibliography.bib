@@ -1,5 +1,6 @@
 % Encoding: UTF-8
 
+@preamble{ " \newcommand{\noopsort}[1]{} " } % a do-nothing command that serves a purpose
 
 @Book{Edelman1983,
   Title                    = {The {Dardic} and {Nuristani} languages},
@@ -13,6 +14,18 @@
   Keywords                 = {Dardic languages.},
   Owner                    = {brunoolsson},
   Timestamp                = {2017.10.02}
+}
+
+@InCollection{Keels1985,
+  author    = {Jack Keels},
+  title     = {Guayabero: Phonology and morphophonemics},
+  booktitle = {{From phonology to discourse: Studies in six Colombian languages }},
+  publisher = {Summer institute of linguistics},
+  year      = {1985},
+  editor    = {Ruth M. Brend},
+  series    = {Language Data, Amerindian Series 9},
+  pages     = {57-87},
+  address   = {Dallas},
 }
 
 @Article{Edelman1980,
@@ -89,15 +102,13 @@
   School                   = {Uppsala University},
   Year                     = {1999},
 
-  Address                  = {Uppsala},
-
   Owner                    = {francescadigarbo},
   Timestamp                = {2017.08.14}
 }
 
 @Unpublished{Graudina1958,
   author    = {Milda Graudiņa},
-  title     = {Laidzes un {Kandavas} izloksne [{The} dialects of {Laizde} and {Kandava}]},
+  title     = {Laidze un {Kandavas} izloksne [{The} dialects of {Laizde} and {Kandava}]},
   year      = {1958},
   note      = {University of Latvia Kandidata disert\={a}cija [=PhD dissertation]},
   address   = {R\={i}ga},
@@ -539,14 +550,14 @@
 @InCollection{Audringthisyear,
   author       = {Jenny Audring},
   title        = {Canonical, complex, complicated?},
-  year         = {\thisyear},
+  year         = {\noopsort{9999}\thisyear},
   editor       = {Francesca {Di Garbo} and Bruno Olsson and Bernhard W\"{a}lchli},
   maintitle    = {Grammatical Gender and Linguistic Complexity},
-  booksubtitle = {General issues and areal and language-specific studies},
+  booksubtitle = {General issues and specific studies},
   volume       = {1},
   publisher    = {Language Science Press},
   location     = {Berlin},
-  pages        = {\pageref{firstpage:Audring}-\pageref{lastpage:Audring}},
+  pages        = {\firstpageAudring{}-\lastpageAudring{}},
 }
 
 @Article{Audring2017,
@@ -595,7 +606,7 @@
   journal = {Morphology},
   year    = {2009},
   volume  = {18},
-  issue   = {2},
+  number   = {2},
   pages   = {93-116},
 }
 
@@ -946,7 +957,7 @@
 
 @Unpublished{Bates2015a,
   Title                    = {Parsimonious mixed models},
-  Author                   = {Douglas Bates and Reinhold Kliegl and Shravan Vasishth and Harald Baayen},
+  Author                   = {Douglas Bates and Reinhold Kliegl and Shravan Vasishth and R. Harald Baayen},
   Note                     = {arXiv:1506.04967},
   Year                     = {2015},
 
@@ -1015,7 +1026,7 @@
   Publisher                = {Lincom Europa},
   Year                     = {2001},
 
-  Address                  = {M\"{u}nchen},
+  Address                  = {Munich},
 
   __markedentry            = {[brunoolsson:]},
   Owner                    = {brunoolsson},
@@ -1214,7 +1225,7 @@
   Timestamp                = {2017.10.25}
 }
 
-@InBook{Bickel2013a,
+@InCollection{Bickel2013a,
   author    = {Balthasar Bickel and Johanna Nichols},
   title     = {Obligatory Possessive Inflection},
   booktitle = {The World Atlas of Language Structures Online},
@@ -1240,11 +1251,13 @@
   Timestamp                = {2016.06.19}
 }
 
-@InBook{Bickel2013,
+@InCollection{Bickel2013,
   author    = {Bickel, Balthasar and Johanna Nichols},
   title     = {Inflectional synthesis of the verb},
   booktitle = {World Atlas of Language Structures Online},
   year      = {2013},
+  publisher = {Max Planck Institute for Evolutionary Anthropology},
+  location  = {Leipzig},
   url       = {http://wals.info/chapter/22},
   owner     = {brunoolsson},
   timestamp = {2017.09.28},
@@ -1294,7 +1307,7 @@
 }
 
 
-@Electronic{Bickel2017,
+@Online{Bickel2017,
   Title                    = {The AUTOTYP typological databases},
   Author                   = {Balthasar Bickel and Johanna Nichols and Taras Zakharko and Alena Witzlack-Makarevich and Kristine Hildebrandt and Michael Rie{\ss}ler and Lennart Bierkandt and Fernando Z\'{u}{\~n}iga and John B. Lowe},
   Note                     = {Version 0.1.0},
@@ -1663,7 +1676,8 @@
 @InCollection{Bradley1991,
   Title                    = {A preliminary syntactic sketch of {Concepci\'{o}n P\'{a}palo Cuicatec}},
   Author                   = {Bradley, David P.},
-  Booktitle                = {Studies in the syntax of {Mixtecan} languages 3},
+  Booktitle                = {Studies in the syntax of {Mixtecan} languages },
+  Volume = {3},
   Publisher                = {Summer Institute of Linguistics},
   Year                     = {1991},
   Editor                   = {Bradley, C. Henry and Hollenbach, Barbara E.},
@@ -2047,7 +2061,7 @@
   Publisher                = {Institut f\"{u}r Afrikanistik, Universit\"{a}t zu K\"{o}ln},
   Year                     = {1993},
 
-  Address                  = {K\"{o}ln},
+  Address                  = {Cologne},
 
   __markedentry            = {[brunoolsson:6]},
   Owner                    = {brunoolsson},
@@ -2544,8 +2558,6 @@
   Author                   = {Miriam Corris},
   School                   = {University of Sydney},
   Year                     = {2005},
-
-  Address                  = {Sydney},
 
   Owner                    = {brunoolsson},
   Timestamp                = {2017.09.25}
@@ -3128,7 +3140,7 @@
 @InCollection{DiGarboinpreparation,
   Title                    = {The complexity of grammatical gender and language ecology},
   Author                   = {Di Garbo, Francesca},
-  Year                     = {forthcoming},
+  Year                     = {\noopsort{9999}forthcoming},
  Booktitle                = {The complexities of morphology},
   Publisher                = {Oxford University Press},
 
@@ -3196,14 +3208,14 @@
 @InCollection{DiGarbothisyear,
   author       = {Di Garbo, Francesca and Matti Miestamo},
   title        = {The evolving complexity of gender agreement systems},
-  year         = {\thisyear},
+  year         = {\noopsort{9999}\thisyear},
   editor       = {Di Garbo, Francesca and Bruno Olsson and Bernhard W\"{a}lchli},
   maintitle    = {Grammatical Gender and Linguistic Complexity},
-  booksubtitle = {Case studies in diachrony and typology},
+  booksubtitle = {World-wide comparative studies},
   volume       = {2},
   publisher    = {Language Science Press},
   location     = {Berlin},
-  pages        = {\pageref{firstpage:DiGarboMiestamo}-\pageref{lastpage:DiGarboMiestamo}},
+  pages        = {\firstpageDGM{}-\lastpageDGM{}},
 }
 
 @Unpublished{Dickens1992,
@@ -3266,10 +3278,10 @@
   author    = {Joachim Dietze},
   title     = {{Die Entwicklung der altrussischen Kategorie der Beseeltheit im 13. und 14. Jahrhundert}},
   year      = {1973},
+  journal      = {Zeitschrift f\"{u}r Slawistik},
   volume    = {18},
   number    = {1},
   pages     = {261-272},
-  note      = {Zeitschrift f\"{u}r Slawistik},
   owner     = {francescadigarbo},
   timestamp = {2015.06.26},
 }
@@ -3563,6 +3575,7 @@
   number    = {514},
   publisher = {Australian National University},
   pages     = {97--115},
+  Address                  = {Canberra},
   owner     = {brunoolsson},
   timestamp = {2017.09.25},
 }
@@ -3645,20 +3658,20 @@
 @InCollection{Dryerthisyear,
   author       = {Matthew S. Dryer},
   title        = {Gender in {Walman}},
-  year         = {\thisyear},
+  year         = {\noopsort{9999}\thisyear},
   editor       = {Francesca {Di Garbo} and Bruno Olsson and Bernhard W\"{a}lchli},
   maintitle    = {Grammatical Gender and Linguistic Complexity},
-  booksubtitle = {General issues and areal and language-specific studies},
+  booksubtitle = {General issues and specific studies},
   volume       = {1},
   publisher    = {Language Science Press},
   location     = {Berlin},
-  pages        = {\pageref{firstpage:Dryer}-\pageref{lastpage:Dryer}},
+  pages        = {\firstpageDryer{}-\lastpageDryer{}},
 }
 
 @Article{DryerUnderrevision,
   Title                    = {Diminutive as an inflectional category in {W}alman},
   Author                   = {Matthew S. Dryer},
-  Year                     = {under revision},
+  Year                     = {\noopsort{9999}under revision},
   Note                     = {Currently being revised for resubmission to \emph{Oceanic Linguistics}},
 
   Owner                    = {brunoolsson},
@@ -3668,7 +3681,7 @@
 @Book{DryerInpreparation,
   Title                    = {A grammar of {W}alman},
   Author                   = {Matthew S. Dryer},
-  Year                     = {in preparation},
+  Year                     = {\noopsort{9999}in preparation},
 
   Owner                    = {brunoolsson},
   Timestamp                = {2017.09.22}
@@ -3765,7 +3778,7 @@
   Publisher                = {Lincom Europa},
   Year                     = {1996},
 
-  Address                  = {M\"{u}nchen},
+  Address                  = {Munich},
 
   __markedentry            = {[brunoolsson:6]},
   Owner                    = {brunoolsson},
@@ -3876,7 +3889,7 @@
   Publisher                = {Stanford University Press},
   Year                     = {1980},
 
-  Address                  = {Stanford, CA},
+  Address                  = {Stanford},
 
   Owner                    = {brunoolsson},
   Timestamp                = {2017.10.28}
@@ -4736,7 +4749,7 @@
   Publisher                = {Lincom Europa},
   Year                     = {2004},
 
-  Address                  = {M\"{u}nchen},
+  Address                  = {Munich},
 
   __markedentry            = {[brunoolsson:6]},
   Owner                    = {brunoolsson},
@@ -5011,14 +5024,14 @@
 @InCollection{Gueldemannthisyear,
   author       = {Tom G\"{u}ldemann and Ines Fiedler},
   title        = {{Niger-Congo} ``noun classes'' conflate gender with declension},
-  year         = {\thisyear},
+  year         = {\noopsort{9999}\thisyear},
   editor       = {Francesca {Di Garbo} and Bruno Olsson and Bernhard W\"{a}lchli},
   maintitle    = {Grammatical Gender and Linguistic Complexity},
-  booksubtitle = {General issues and areal and language-specific studies},
+  booksubtitle = {General issues and specific studies},
   volume       = {1},
   publisher    = {Language Science Press},
   location     = {Berlin},
-  pages        = {\pageref{firstpage:Gueld}-\pageref{lastpage:Gueld}},
+  pages        = {\firstpageGueld{}-\lastpageGueld{}},
 }
 
 @Unpublished{Gueldemann2016,
@@ -5563,7 +5576,7 @@
 }
 
 @PhdThesis{Heuvel2006,
-  author      = {Heuvel, Wilco van den},
+  author      = {van de Heuvel, Wilco},
   title       = {Biak: {Description} of an {Austronesian} language of {Papua}},
   institution = {Vrije Universiteit Amsterdam},
   year        = {2006},
@@ -5630,7 +5643,7 @@
   Publisher                = {Dietrich Reimer Verlag},
   Year                     = {1983},
 
-  Address                  = {K\"oln},
+  Address                  = {Cologne},
   Editor                   = {Rainer Vossen and Marianne Becchaus-Gerst},
   Pages                    = {245-268},
 
@@ -5868,7 +5881,7 @@
 
 @Book{Hualde2003,
   Title                    = {{A grammar of Basque}},
-  Author                   = {Hualde, Jos{\'e} Ignacio and de Urbina, Jon Ortiz},
+  Author                   = {Hualde, Jos{\'e} Ignacio and Ortiz de Urbina, Jon},
   Publisher                = {Mouton de Gruyter},
   Year                     = {2003},
 
@@ -6063,7 +6076,7 @@
 
 @Article{Fleischer2007a,
   author    = {J\"{u}rg Fleischer},
-  title     = {{Das pr\"{a}dikative Adjektiv und Partizip im Althochdeutschen und Altniederdeutscheny}},
+  title     = {{Das pr\"{a}dikative Adjektiv und Partizip im Althochdeutschen und Altniederdeutschen}},
   journal   = {Sprachwissenschaft},
   year      = {2007},
   volume    = {32},
@@ -6235,7 +6248,7 @@
   Year                     = {2008},
   Series                   = {Languages of the World: Materials 469},
 
-  Location                 = {M\"{u}nchen}
+  Location                 = {Munich}
 }
 
 @Book{Koepcke1982,
@@ -6349,18 +6362,6 @@
   Timestamp                = {2017.11.06}
 }
 
-@InCollection{Keels1985,
-  Title                    = {Guayabero: {Phonology} and morphophonemics},
-  Author                   = {Keels, Jack},
-  Booktitle                = {From phonology to discourse: {Studies} in six {Colombian} languages},
-  Publisher                = {Summer Institute of Linguistics},
-  Year                     = {1985},
-  Editor                   = {Brend, Ruth M.},
-  Pages                    = {57-87},
-  Series                   = {Language Data, Amerindian Series 9},
-
-  Location                 = {Dallas}
-}
 
 @Article{Keij2012,
   Title                    = {Knowing versus producing: {The} acquisition of grammatical gender and the definite determiner in {Dutch} by {Ll}-{TD}, {Ll}-{SLI}, and {eL}2 children},
@@ -6524,14 +6525,14 @@
 @InCollection{Killianthisyear,
   author       = {Don Killian},
   title        = {Gender in {Uduk}},
-  year         = {\thisyear},
+  year         = {\noopsort{9999}\thisyear},
   editor       = {Francesca {Di Garbo} and Bruno Olsson and Bernhard W\"{a}lchli},
   maintitle    = {Grammatical Gender and Linguistic Complexity},
-  booksubtitle = {General issues and areal and language-specific studies},
+  booksubtitle = {General issues and specific studies},
   volume       = {1},
   publisher    = {Language Science Press},
   location     = {Berlin},
-  pages        = {\pageref{firstpage:Killian}-\pageref{lastpage:Killian}},
+  pages        = {\firstpageKillian{}-\lastpageKillian{}},
 }
 
 @PhdThesis{Killian2015,
@@ -6579,7 +6580,6 @@
   title     = {Shilluk grammar, with a little {Shilluk-English} dictionary},
   year      = {1933},
   publisher = {Missioni Africane},
-  pages     = {336},
   address   = {Verona},
 }
 
@@ -6601,7 +6601,7 @@
   Title                    = {Beyond maximal random effects for logistic regression: {Moving} past convergence problems},
   Author                   = {Kimball, Amelia E. and Kailen Shantz and Christopher Eager and Joseph Roy},
   Note                     = {Submitted manuscript. Available at \url{https://arxiv.org/pdf/1611.00083.pdf}},
-  Year                     = {submitted},
+  Year                     = {\noopsort{9999}submitted},
 
   Owner                    = {brunoolsson},
   Timestamp                = {2017.10.30}
@@ -6698,8 +6698,27 @@
   Year                     = {2016},
 
   Address                  = {Berlin},
+  Editor                   = {Marian Klamer},
   Number                   = {3},
   Pages                    = {5-53},
+  Series                   = {Studies in Linguistic Diversity},
+
+  Owner                    = {brunoolsson},
+  Timestamp                = {2017.11.21}
+}
+
+@InCollection{Klamer2017,
+  Title                    = {The {Alor-Pantar} languages: {Linguistic} context, history and typology},
+  Author                   = {Marian Klamer},
+  Booktitle                = {The {Alor-Pantar} Languages: {History} and Typology},
+  Publisher                = {Language Science Press},
+  Year                     = {2017},
+
+  Address                  = {Berlin},
+  Editor                   = {Marian Klamer},
+  Number                   = {3},
+  Edition                  = {2},
+  Pages                    = {1-48},
   Series                   = {Studies in Linguistic Diversity},
 
   Owner                    = {brunoolsson},
@@ -6724,7 +6743,7 @@
 
 @Book{Kondo1985,
   Title                    = {El guahibo hablado: {Gram\'{a}tica} pedag\'{o}gica del guahibo, lengua de la orinoqu\'{i}a colombiana},
-  Author                   = {Riena W. de Kondo},
+  Author                   = {de Kondo, Riena W.},
   Publisher                = {Instituto Ling\"{u}\'{i}stico de Verano},
   Year                     = {1985},
   Volume                   = {1--2},
@@ -7121,14 +7140,14 @@
 @InCollection{Liljegrenthisyear,
   author       = {Henrik Liljegren},
   title        = {Gender typology and gender (in)stability in {Hindu Kush Indo-Aryan} languages},
-  year         = {\thisyear},
+  year         = {\noopsort{9999}\thisyear},
   editor       = {Francesca {Di Garbo} and Bruno Olsson and Bernhard W\"{a}lchli},
   maintitle    = {Grammatical Gender and Linguistic Complexity},
-  booksubtitle = {General issues and areal and language-specific studies},
+  booksubtitle = {General issues and specific studies},
   volume       = {1},
   publisher    = {Language Science Press},
   location     = {Berlin},
-  pages        = {\pageref{firstpage:Liljegren}-\pageref{lastpage:Liljegren}},
+  pages        = {\firstpageLilje{}-\lastpageLilje{}},
 }
 
 @InCollection{Liljegren2014,
@@ -7227,8 +7246,6 @@
   Author                   = {Eva Lindstr\"{o}m},
   School                   = {Stockholm University},
   Year                     = {2002},
-
-  Address                  = {Stockholm},
 
   Owner                    = {brunoolsson},
   Timestamp                = {2017.09.25}
@@ -7418,7 +7435,7 @@
   Publisher                = {Anthropos},
   Year                     = {1954},
 
-  Address                  = {Fosieux, Switzerland},
+  Address                  = {Fosieux},
   Number                   = {12},
   Series                   = {Microbibliotheca Anthropos},
 
@@ -7945,7 +7962,7 @@
 }
 
 @Book{Mellow2013,
-  Title                    = {A dictionary of {Owa}. A language of the {Solomon Islands}},
+  Title                    = {A dictionary of {Owa}: {A} language of the {Solomon Islands}},
   Author                   = {Mellow, Greg},
   Publisher                = {De Gruyter Mouton},
   Year                     = {2013},
@@ -8029,9 +8046,9 @@
   Author                   = {Miehe, Gudrun},
   Booktitle                = {Endangered languages in contact: {The} {Plateau} languages of {Nigeria}},
   Publisher                = {K\"{o}ppe},
-  Year                     = {forthcoming},
+  Year                     = {\noopsort{9999}forthcoming},
 
-  Address                  = {K\"{o}ln},
+  Address                  = {Cologne},
   Editor                   = {Schumann, Theda and Roland Kie{\ss}ling},
 
   Owner                    = {brunoolsson},
@@ -8048,7 +8065,7 @@
   volume       = {2},
   publisher    = {K\"{o}ppe},
   pages        = {5-37},
-  address      = {K\"{o}ln},
+  address      = {Cologne},
   owner        = {brunoolsson},
   timestamp    = {2017.11.15},
 }
@@ -8641,7 +8658,7 @@
   author    = {Johanna Nichols},
   title     = {Canonical complexity},
   booktitle = {The complexities of morphology},
-  year      = {forthcoming},
+  year      = {\noopsort{9999}forthcoming},
   editor    = {Peter Arkadiev and Francesco Gardani},
   publisher = {Oxford University Press},
   location  = {Oxford},
@@ -8650,14 +8667,14 @@
 @InCollection{Nicholsthisyear,
   author       = {Johanna Nichols},
   title        = {Why is gender so complex? {Some} typological considerations},
-  year         = {\thisyear},
+  year         = {\noopsort{9999}\thisyear},
   editor       = {Francesca {Di Garbo} and Bruno Olsson and Bernhard W\"{a}lchli},
   maintitle    = {Grammatical Gender and Linguistic Complexity},
-  booksubtitle = {General issues and areal and language-specific studies},
+  booksubtitle = {General issues and specific studies},
   volume       = {1},
   publisher    = {Language Science Press},
   location     = {Berlin},
-  pages        = {\pageref{firstpage:Nichols}-\pageref{lastpage:Nichols}},
+  pages        = {\firstpageNichols{}-\lastpageNichols{}},
 }
 
 @InCollection{Nichols2003,
@@ -8711,7 +8728,7 @@
   Publisher                = {Caravan Books},
   Year                     = {1994},
 
-  Address                  = {Delmar, NY},
+  Address                  = {Delmar},
   Editor                   = {Rieks Smeets},
   Pages                    = {1-77},
 
@@ -8735,7 +8752,7 @@
   Publisher                = {University of California Press},
   Year                     = {2011},
 
-  Address                  = {Berkeley--Los Angeles},
+  Address                  = {Berkeley},
 
   Owner                    = {brunoolsson},
   Timestamp                = {2017.09.29}
@@ -8754,13 +8771,14 @@
   Keywords                 = {Areal linguistics sampling}
 }
 
-@InBook{Nichols2013,
+@InCollection{Nichols2013,
   author    = {Johanna Nichols and Balthasar Bickel},
   title     = {Possessive Classification},
   booktitle = {The World Atlas of Language Structures Online},
   year      = {2013},
   editor    = {Matthew S. Dryer and Martin Haspelmath},
   publisher = {Max Planck Institute for Evolutionary Anthropology},
+  location  = {Leipzig},
   url       = {http://wals.info/chapter/59},
   address   = {Leipzig},
 }
@@ -8785,7 +8803,7 @@
   Year                     = {2017},
 
   Address                  = {Berlin},
-  Note                     = {Translated by Christo Stamenov},
+  Note                     = {(Translated by Christo Stamenov)},
 
   __markedentry            = {[brunoolsson:6]},
   Owner                    = {brunoolsson},
@@ -8827,14 +8845,14 @@
 @InCollection{Olssonthisyear,
   author       = {Bruno Olsson},
   title        = {The gender system of {Coastal Marind}},
-  year         = {\thisyear},
+  year         = {\noopsort{9999}\thisyear},
   editor       = {Francesca {Di Garbo} and Bruno Olsson and Bernhard W\"{a}lchli},
   maintitle    = {Grammatical Gender and Linguistic Complexity},
-  booksubtitle = {General issues and areal and language-specific studies},
+  booksubtitle = {General issues and specific studies},
   volume       = {1},
   publisher    = {Language Science Press},
   location     = {Berlin},
-  pages        = {\pageref{firstpage:Olsson}-\pageref{lastpage:Olsson}},
+  pages        = {\firstpageOlsson{}-\lastpageOlsson{}},
 }
 
 @PhdThesis{Olsson2017,
@@ -9051,8 +9069,6 @@
   School                   = {University of Amsterdam},
   Year                     = {2016},
 
-  Address                  = {Utrecht},
-
   Owner                    = {francescadigarbo},
   Timestamp                = {2017.05.03}
 }
@@ -9063,7 +9079,7 @@
   booktitle = {Noun Classes and Categorization. {Proceedings} of a symposium on categorization and noun classification, {Eugene, Oregon, October} 1983},
   year      = {1986},
   editor    = {Craig, Colette G.},
-  publisher = {John Benjamins Publishing Company},
+  publisher = {Benjamins},
   pages     = {113-131},
   address   = {Amsterdam},
 }
@@ -9154,7 +9170,7 @@
   Publisher                = {Summer Institute of Linguistics},
   Year                     = {1973},
 
-  Address                  = {Norman, Oklahoma},
+  Address                  = {Norman},
 
   __markedentry            = {[brunoolsson:6]},
   Owner                    = {brunoolsson},
@@ -9414,7 +9430,7 @@
 @Manual{RCT2017,
   Title                    = {R: {A} language and environment for statistical computing},
 
-  Address                  = {Vienna, Austria},
+  Address                  = {Vienna},
   Author                   = {{R Core Team}},
   Organization             = {R Foundation for Statistical Computing},
   Year                     = {2017},
@@ -9797,8 +9813,6 @@
   School                   = {Radboud Universiteit},
   Year                     = {2011},
 
-  Address                  = {Nijmegen},
-
   Owner                    = {brunoolsson},
   Timestamp                = {2017.09.25}
 }
@@ -9844,7 +9858,7 @@
   author = {Nicholas Reid},
   title = {Class and Classifier in {N}gan'gityemerri},
   booktitle = {Nominal Classification in Aboriginal {A}ustralia},
-  publisher = {John Benjamins},
+  publisher = {Benjamins},
   year = {1997},
   editor = {Harvey, Mark and Reid, Nicholas},
   pages = {165-225},
@@ -9880,7 +9894,7 @@
 @PHDTHESIS{Santos1996,
   author = {Rosine Sachot Santos},
   title = {Le mey},
-  school = {Universite de la Sorbonne Nouvelle},
+  school = {Universit\'{e} de la Sorbonne Nouvelle},
   year = {1996},
   address = {Paris},
   owner = {fdiga},
@@ -10128,9 +10142,8 @@
 
 @Book{Schuster-Sewc1976,
   author        = {Heinz Schuster-\v{S}ewc},
-  title         = {Gramatika hornjoserbskeje r\v{e}\v{c}e [{Grammar of Upper Sorbian}]},
   year          = {1976},
-  part          = {2: {Syntaksa}},
+  maintitle     = {Gramatika hornjoserbskeje r\v{e}\v{c}e [{Grammar of Upper Sorbian}], {Part} 2: {Syntaksa}},
   publisher     = {Domowina},
   __markedentry = {[brunoolsson:6]},
   address       = {Bautzen},
@@ -10247,7 +10260,7 @@
   Publisher                = {Spoken Language Services},
   Year                     = {1976},
 
-  Address                  = {Ithaca, NY},
+  Address                  = {Ithaca},
 
   __markedentry            = {[brunoolsson:6]},
   Owner                    = {brunoolsson},
@@ -10304,12 +10317,14 @@
 }
 
 @InCollection{Seifart2018,
-  Title                    = {The semantic reduction of the noun universe and the diachrony of nominal classification},
-  Author                   = {Seifart, Frank},
-  Booktitle                = {The diachrony of classification systems},
-  Publisher                = {Benjamins},
-  Year                     = {2018},
-  Editor                   = {McGregor, William B. and Wichmann, S\"{o}ren},
+  author    = {Seifart, Frank},
+  title     = {The semantic reduction of the noun universe and the diachrony of nominal classification},
+  booktitle = {The diachrony of classification systems},
+  year      = {2018},
+  editor    = {McGregor, William B. and Wichmann, S{\o}ren},
+  publisher = {Benjamins},
+}
+,
   Pages                    = {9-32},
 
   Location                 = {Amsterdam}
@@ -10330,7 +10345,7 @@
 
 @Article{Seifart2007,
   author    = {Frank Seifart},
-  title     = {{The Prehistory of Nominal Classification in Witotoan Languages}},
+  title     = {{The prehistory of nominal classification in Witotoan Languages}},
   journal   = {International Journal of American Linguistics},
   year      = {2007},
   volume    = {73},
@@ -10344,7 +10359,6 @@
   author    = {Frank Seifart},
   title     = {The structure and use of shape-based noun classes in {Mira{\~{n}}a}},
   year      = {2005},
-  address   = {Nijmegen},
   owner     = {francescadigarbo},
   school    = {Radboud Universiteit Nijmegen},
   timestamp = {2014.11.15},
@@ -10354,7 +10368,6 @@
   author        = {Senft, Gunter},
   title         = {Kilivila: {The} Language of the {Trobriand} Islanders},
   year          = {1986},
-  note          = {Leipzig},
   publisher     = {Mouton de Gruyter},
   address       = {Berlin},
   date-added    = {2012-04-16 19:52:38 +0000},
@@ -10690,14 +10703,14 @@
 @InCollection{Sinnemaekithisyear,
   author       = {Kaius Sinnem{\"a}ki},
   title        = {On the distribution and complexity of gender and numeral classifiers},
-  year         = {\thisyear},
+  year         = {\noopsort{9999}\thisyear},
   editor       = {Francesca {Di Garbo} and Bruno Olsson and Bernhard W\"{a}lchli},
   maintitle    = {Grammatical Gender and Linguistic Complexity},
-  booksubtitle = {Case studies in diachrony and typology},
+  booksubtitle = {World-wide comparative studies},
   volume       = {2},
   publisher    = {Language Science Press},
   location     = {Berlin},
-  pages        = {\pageref{firstpage:Sinne}-\pageref{lastpage:Sinne}},
+  pages        = {\firstpageSinne{}-\lastpageSinne{}},
 }
 
 @Article{Skalmowski1985,
@@ -11179,14 +11192,14 @@
 @InCollection{Svaerdthisyear,
   author       = {Erik Sv\"{a}rd},
   title        = {Gender in {New Guinea}},
-  year         = {\thisyear},
+  year         = {\noopsort{9999}\thisyear},
   editor       = {Francesca {Di Garbo} and Bruno Olsson and Bernhard W\"{a}lchli},
   maintitle    = {Grammatical Gender and Linguistic Complexity},
-  booksubtitle = {General issues and areal and language-specific studies},
+  booksubtitle = {General issues and specific studies},
   volume       = {1},
   publisher    = {Language Science Press},
   location     = {Berlin},
-  pages        = {\pageref{firstpage:Svaerd}-\pageref{lastpage:Svaerd}},
+  pages        = {\firstpageSvaerd{}-\lastpageSvaerd{}},
 }
 
 @InCollection{Svantesson2003,
@@ -11335,7 +11348,7 @@
 
   Address                  = {Yarinacocha},
   Series                   = {Serie Ling\"{u}istica Peruana},
-  Volume                   = {38},
+  Number                   = {38},
 
   __markedentry            = {[brunoolsson:6]},
   Owner                    = {brunoolsson},
@@ -11403,7 +11416,7 @@
   publisher = {R{\"u}diger K{\"o}ppe Verlag},
   year = {1994},
   author = {Traill, Anthony.},
-  address = {K{\"o}ln},
+  address = {Cologne},
   date-added = {2012-04-16 19:52:38 +0000},
   date-modified = {2012-04-16 19:52:39 +0000}
 }
@@ -11578,7 +11591,7 @@
   year      = {2017},
   address   = {Leiden},
   owner     = {francescadigarbo},
-  school    = {{Leiden University Centre for Linguistics}},
+  school    = {{Leiden University}},
   timestamp = {2017.04.25},
 }
 
@@ -11662,10 +11675,10 @@
   Timestamp                = {2017.10.02}
 }
 
-@Unpublished{Vincent2010,
+@Book{Vincent2010,
   Title                    = {{Tairora-English} dictionary},
   Author                   = {Vincent, Lois E.},
-  Note                     = {Wycliffe Papua New Guinea Branch},
+  Publisher                     = {Wycliffe Papua New Guinea Branch},
   Year                     = {2010}
 }
 
@@ -11730,14 +11743,14 @@
 @InCollection{Waelchlithisyear,
   author       = {Bernhard W{\"a}lchli},
   title        = {The feminine anaphoric gender gram, incipient gender marking, maturity, and extracting anaphoric gender markers from parallel texts},
-  year         = {\thisyear},
+  year         = {\noopsort{9999}\thisyear},
   editor       = {Francesca {Di Garbo} and Bruno Olsson and Bernhard W\"{a}lchli},
   maintitle    = {Grammatical Gender and Linguistic Complexity},
-  booksubtitle = {Case studies in diachrony and typology},
+  booksubtitle = {World-wide comparative studies},
   volume       = {2},
   publisher    = {Language Science Press},
   location     = {Berlin},
-  pages        = {\pageref{firstpage:Waelchli}-\pageref{lastpage:Waelchli}},
+  pages        = {\firstpageWaelchli{}-\lastpageWaelchli{}},
 }
 
 @InCollection{Waelchli2018,
@@ -11779,20 +11792,20 @@
 @InCollection{Waelchlithisyeara,
   author       = {W{\"a}lchli, Bernhard and Di Garbo, Francesca},
   title        = {The dynamics of gender complexity},
-  year         = {\thisyear},
+  year         = {\noopsort{9999}\thisyear},
   editor       = {Di Garbo, Francesca and Olsson, Bruno and W{\"a}lchli, Bernhard},
   maintitle    = {Grammatical Gender and Linguistic Complexity},
-  booksubtitle = {Case studies in diachrony and typology},
+  booksubtitle = {World-wide comparative studies},
   volume       = {2},
   publisher    = {Language Science Press},
   location     = {Berlin},
-  pages        = {\pageref{firstpage:WDG}-\pageref{lastpage:WDG}},
+  pages        = {\firstpageWDG{}-\lastpageWDG{}},
 }
 
 @Article{Walchlims.,
   Title                    = {The insidius emergence of a gender system in {N}alca ({M}ek, {I}rian {J}aya): {Inquorate} noun classes, adjacency agreement, and switching on and off gender in syntax},
   Author                   = {Bernhard W{\"a}lchli and Eric Sv{\"a}rd},
-  Year                     = {in preparation},
+  Year                     = {\noopsort{9999}in preparation},
 
   Owner                    = {fdiga},
   Timestamp                = {2014.04.09}
@@ -12052,7 +12065,7 @@
   Publisher                = {Springer-Verlag},
   Year                     = {2009},
 
-  Address                  = {New York, NY},
+  Address                  = {New York},
 
   Owner                    = {brunoolsson},
   Timestamp                = {2017.10.25}
@@ -12292,12 +12305,12 @@
   Year                     = {1992},
   Series                   = {Colecci\'{o}n Ling\"{u}\'{i}stica Ind\'{i}gena 6},
 
-  Location                 = {M\'{e}xico}
+  Location                 = {Mexico City}
 }
 
 @Book{Zipf1935,
   author    = {Zipf, George Kingsley},
-  title     = {The psycho-biology of language. An introduction to dynamic philology},
+  title     = {{The psycho-biology of language. An introduction to dynamic philology}},
   year      = {1935},
   publisher = {Houghton Mifflin},
   location  = {Boston},
@@ -12406,6 +12419,17 @@
   Url                      = {http://wals.info/}
 }
 
+@incollection{wals-81,
+  address   = {Leipzig},
+  author    = {Matthew S. Dryer},
+  booktitle = {The World Atlas of Language Structures Online},
+  editor    = {Matthew S. Dryer and Martin Haspelmath},
+  publisher = {Max Planck Institute for Evolutionary Anthropology},
+  title     = {Order of Subject, Object and Verb},
+  url       = {https://wals.info/chapter/81},
+  year      = {2013}
+}
+
 @Book{Evans2005,
   Title                    = {Materials on {Golin}: {Grammar}, texts and dictionary},
   Editor                   = {Evans, Nicholas and Besold, Jutta and Stoakes, Hywel and Lee, Alan},
@@ -12501,20 +12525,21 @@
   title   = {Ergativity},
   journal = {Language},
   year    = {1979},
+   volume  = {55},
   pages   = {59-138},
 }
 
 @InCollection{Dahlthisyear,
   author       = {\"{O}sten Dahl},
   title        = {Gender: {Esoteric} or exoteric?},
-  year         = {\thisyear},
+  year         = {\noopsort{9999}\thisyear},
   editor       = {Di Garbo, Francesca and Olsson, Bruno and W{\"a}lchli, Bernhard},
   maintitle    = {Grammatical Gender and Linguistic Complexity},
-  booksubtitle = {General issues and areal and language-specific studies},
+  booksubtitle = {General issues and specific studies},
   volume       = {1},
   publisher    = {Language Science Press},
   location     = {Berlin},
-  pages        = {\pageref{firstpage:Dahl}-\pageref{lastpage:Dahl}},
+  pages        = {\firstpageDahl{}-\lastpageDahl{}},
 }
 
 @Article{Malkiel1957-1958,
@@ -12562,7 +12587,7 @@
   title        = {Cuatro morfemas funcionales en las lenguas mixtecanas},
   booktitle    = {Vitalidad e influencia de las lenguas ind{\'\i}genas en {Latinoam{\'e}rica}: {II} Coloquio {Mauricio Swadesh}},
   year         = {1995},
-  organization = {Universidad Nacional Aut{\'o}noma de M{\'e}xico},
+  school = {Universidad Nacional Aut{\'o}noma de M{\'e}xico},
   pages        = {284--293},
 }
 
