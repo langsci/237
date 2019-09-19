@@ -524,22 +524,24 @@ When the model does not converge, there are three options available: simplify th
 
 However, there are situations that may be somewhat problematic if maximal random structure is used. Sometimes the correlation parameter between the random intercept and the random slope for a particular effect is close to or even equals $\pm1.0$. This circumstance means that there is not enough data to fit both a random intercept and a random slope for a particular effect (\citealt{Baayen2008}; \citealt{Bates2015a}). In these situations I followed the recommendations of \citet{Barr2013} and chose to keep the maximal model. There are two reasons for this. First, simplifying the models by removing the correlation between random effects or by removing a random slope usually only increases the likelihood ratio of the fixed term (here numeral classifiers) and makes its p-value smaller. In all the models below, the fixed effect was significant even with the maximal model, so simplifying the models would not have changed the situation. Second, since languages change at different rates across families and areas (cf.\ \citealt{Nichols2003}), it is crucial to include random slopes for both families and areas. Yet owing to the high number of families it may not be usually possible to include more than one random factor for genealogical affiliation especially in Generalized Linear Mixed Models. For instance, \citet{Atkinson2011} modeled both genera and families as random factors but only as random intercepts not as random slopes (or as nested factors, which could have been done). Thus mixed models may not be able to account for the internal structure of language families for which other approaches are called for, such as the Family Bias Theory of \citet{Bickel2013b} or phylogenetic regression (e.g., \citealt{Dunn2011}).
 
-\begin{figure}
-\includegraphics[width=\textwidth]{figures/13/Fig7_Map6areas_s}
-\caption{Six macroareas of the \textit{WALS} on the world map}
-\label{fig:Sinne:7}
-\end{figure}
-
-\begin{figure}
-\includegraphics[width=\textwidth]{figures/13/Fig8_Map24areas_s}
-\caption{The 24 areas of the \textit{Autotyp} on a world map}
-\label{fig:Sinne:8}
-\end{figure}
 
 Convergence can be improved also by using a different optimizer. The R package \texttt{lme4} \citep{Bates2015} uses two optimizers, BOBYQA and Nelder-Mead, to estimate the random effects in generalized linear mixed effects modeling. My models did not always converge with the default settings, that is, when using both these optimizers. My solution was to use only one optimizer at a time. I used BOBYQA for most of the models (it is also faster in practice) and Nelder-Mead only when using BOBYQA did not work: these choices resulted in model convergence in all situations. A more general solution to the convergence error is offered by Bayesian mixed effects modeling (see e.g.\ \citealt{Kimballsubmitted}), but I chose to use the frequentist approach here because of its greater familiarity in linguistics.
 
 In the mixed effects modeling I let the intercepts and the slopes vary between the \textit{WALS} families and between the continents as defined in the \textit{Autotyp}. But there are other genealogical classifications that could have been used and the world can also be divided into geographical areas based on different criteria. The classifications I chose capture variation at one particular level of configuration, so it is informative to try out alternative configurations as well. For instance, the ten continents used in the \textit{Autotyp} may conceal variation that occurs in finer-grained areas or in larger macro-areas. For this reason I retested the hypothesis by using an alternative genealogical classification as well as two alternative areal configurations. As an alternative genealogical classification I used stocks, the highest level of classification in the \textit{Autotyp} database \citep{Bickel2017}. As alternative areal configurations I used the six macroareas in the \textit{WALS} and the 24 areas in the \textit{Autotyp}. The six macroareas of the \textit{WALS} are illustrated on a world map in \figref{fig:Sinne:7} (using the 2679 languages of that database) and the 24 areas of the \textit{Autotyp} are illustrated in \figref{fig:Sinne:8} (using 2949 languages of that database).%
 \footnote{See \citet{Hammarstroem2014} for a macroareal definition that is different from those used in the \textit{WALS}. Most areal breakdowns in language typology are based on geography, but it would be possible to use also areal breakdowns based on other criteria, such as social structure \citep{Burton1996}. However, typological research has yet to discuss and employ such approaches.} These combinations of the genealogical and areal classifications produced five additional models listed in \tabref{tab:Sinne:4}.
+
+\begin{figure}[t]
+\includegraphics[width=\textwidth]{figures/13/Fig7_Map6areas_s}
+\caption{Six macroareas of the \textit{WALS} on the world map}
+\label{fig:Sinne:7}
+\end{figure}
+
+\begin{figure}[t]
+\includegraphics[width=\textwidth]{figures/13/Fig8_Map24areas_s}
+\caption{The 24 areas of the \textit{Autotyp} on a world map}
+\label{fig:Sinne:8}
+\end{figure}
+
 
 \begin{table}[htb]
 \footnotesize
