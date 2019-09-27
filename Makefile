@@ -33,6 +33,7 @@ main.snd: main.bbl
 	sed -i 's/.*Commission.*//' main.adx
 	sed -i 's/.*Archive.*//' main.adx
 	sed -i 's/\\MakeCapital//' main.adx
+	sed -i 's/Kibrik, Aleksandr/Kibrik, Alexander/' main.adx
 	sed -i 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' main.ldx
 	python3 fixindex.py
 	mv mainmod.adx main.adx
